@@ -1,0 +1,33 @@
+{
+  "name": "@example/server",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node ../../build.mjs && tsc -b"
+  },
+  "source": "src/server.ts",
+  "exports": {
+    "types": "./dist/server.d.ts",
+    "require": "./dist/server.cjs",
+    "default": "./dist/server.mjs"
+  },
+  "imports": {
+    "#platform": {
+      "bun": "@example/bun",
+      "node": "@example/node",
+      "worker": "@example/worker"
+    }
+  },
+  "optionalPeerDependencies": {
+    "@example/bun": "^1.0.0",
+    "@example/node": "^1.0.0",
+    "@example/runtime": "^1.0.0",
+    "@example/worker": "^1.0.0"
+  },
+  "dependencies": {
+    "cookie": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/cookie": "^0.5.1",
+    "typescript": "^4.8.4"
+  }
+}

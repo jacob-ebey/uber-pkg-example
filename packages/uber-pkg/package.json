@@ -1,0 +1,32 @@
+{
+  "name": "uber-pkg",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node ../../build.mjs && tsc -b"
+  },
+  "source": "src/uber-pkg.ts",
+  "exports": {
+    "types": "./dist/uber-pkg.d.ts",
+    "require": "./dist/uber-pkg.cjs",
+    "default": "./dist/uber-pkg.mjs"
+  },
+  "imports": {
+    "#platform": {
+      "bun": "@example/bun",
+      "node": "@example/node",
+      "worker": "@example/worker"
+    }
+  },
+  "optionalPeerDependencies": {
+    "@example/bun": "^1.0.0",
+    "@example/node": "^1.0.0",
+    "@example/worker": "^1.0.0"
+  },
+  "dependencies": {
+    "@example/runtime": "^1.0.0",
+    "@example/server": "1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@example/platform",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node ../../build.mjs && tsc -b"
+  },
+  "source": "./src/platform.ts",
+  "exports": {
+    "types": "./dist/platform.d.ts",
+    "require": "./dist/platform.cjs",
+    "default": "./dist/platform.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}

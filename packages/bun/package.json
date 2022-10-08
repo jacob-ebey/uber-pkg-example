@@ -1,0 +1,12 @@
+{
+  "name": "@example/bun",
+  "version": "1.0.0",
+  "main": "./src/bun.ts",
+  "scripts": {
+    "build": ""
+  },
+  "devDependencies": {
+    "@example/platform": "1.0.0",
+    "bun-types": "^0.1.11"
+  }
+}

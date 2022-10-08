@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "workspaces": [
+    "examples/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.10",
+    "turbo": "^1.5.5"
+  }
+}

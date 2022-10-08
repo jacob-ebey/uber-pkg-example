@@ -1,0 +1,17 @@
+{
+  "name": "@example/worker",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node ../../build.mjs"
+  },
+  "source": "src/worker.ts",
+  "exports": {
+    "types": "./dist/worker.d.ts",
+    "require": "./dist/worker.cjs",
+    "default": "./dist/worker.mjs"
+  },
+  "devDependencies": {
+    "@example/platform": "1.0.0",
+    "typescript": "^4.8.4"
+  }
+}

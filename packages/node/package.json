@@ -1,0 +1,22 @@
+{
+  "name": "@example/node",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node ../../build.mjs && tsc -b"
+  },
+  "source": "src/node.ts",
+  "exports": {
+    "types": "./dist/node.d.ts",
+    "require": "./dist/node.cjs",
+    "default": "./dist/node.mjs"
+  },
+  "dependencies": {
+    "cookie-signature": "1.2.0"
+  },
+  "devDependencies": {
+    "@example/platform": "1.0.0",
+    "@types/cookie-signature": "^1.0.4",
+    "@types/node": "^16.0.0",
+    "typescript": "^4.8.4"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@examples/node",
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "dependencies": {
+    "@example/bun": "^1.0.0",
+    "@example/node": "^1.0.0",
+    "@example/worker": "^1.0.0",
+    "uber-pkg": "^1.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.10",
+    "esbuild-node-externals": "^1.5.0"
+  },
+  "sideEffects": false
+}
