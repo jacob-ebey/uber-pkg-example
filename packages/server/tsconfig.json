@@ -2,13 +2,11 @@
   "include": ["src", "tests"],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
-    "emitDeclarationOnly": true,
-    "declaration": true,
+    "noEmit": true,
     "module": "Node16",
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
-    "isolatedModules": true,
-    "types": ["bun-types"]
+    "isolatedModules": true
   }
 }
