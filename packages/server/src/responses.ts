@@ -1,8 +1,4 @@
-// must be a type since this is a subtype of response
-// interfaces must conform to the types they extend
-export type TypedResponse<T extends unknown = unknown> = Response & {
-  json(): Promise<T>;
-};
+import { type TypedResponse } from "@example/core";
 
 /**
  * This is a shortcut for creating `application/json` responses. Converts `data`
@@ -51,4 +47,23 @@ export function redirect(
     ...responseInit,
     headers,
   }) as TypedResponse<never>;
+}
+
+export function isResponse(value: any): value is Response {
+  return (
+    value != null &&
+    typeof value.status === "number" &&
+    typeof value.statusText === "string" &&
+    typeof value.headers === "object" &&
+    typeof value.body !== "undefined"
+  );
+}
+
+const redirectStatusCodes = new Set([301, 302, 303, 307, 308]);
+export function isRedirectResponse(response: Response): boolean {
+  return redirectStatusCodes.has(response.status);
+}
+
+export function isCatchResponse(response: Response) {
+  return response.headers.get("X-Remix-Catch") != null;
 }

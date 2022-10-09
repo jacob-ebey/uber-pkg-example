@@ -1,0 +1,17 @@
+{
+  "name": "@example/core",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node ../../build.mjs && tsc -b"
+  },
+  "source": "./src/core.ts",
+  "exports": {
+    "types": "./dist/core.d.ts",
+    "require": "./dist/core.cjs",
+    "default": "./dist/core.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "sideEffects": false
+}

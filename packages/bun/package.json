@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "./src/bun.ts",
   "scripts": {
+    "build": "tsc -b",
     "test": "bun wiptest"
   },
   "devDependencies": {

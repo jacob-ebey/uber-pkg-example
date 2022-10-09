@@ -2,7 +2,6 @@
   "include": ["src"],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
-    "lib": ["DOM"],
     "emitDeclarationOnly": true,
     "declaration": true,
     "module": "Node16",

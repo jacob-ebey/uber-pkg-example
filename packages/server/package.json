@@ -31,14 +31,17 @@
     "@example/browser": "1.0.0",
     "@example/platform": "1.0.0",
     "@remix-run/router": "1.0.2",
-    "cookie": "^0.5.0"
+    "cookie": "0.5.0",
+    "set-cookie-parser": "2.5.1"
   },
   "devDependencies": {
     "@example/bun": "1.0.0",
+    "@example/core": "1.0.0",
     "@example/node": "1.0.0",
     "@example/worker": "1.0.0",
     "@types/cookie": "^0.5.1",
     "@types/node": "18.8.3",
+    "@types/set-cookie-parser": "2.4.2",
     "bun-types": "^0.1.11",
     "concurrently": "7.4.0",
     "tsx": "3.10.1",
