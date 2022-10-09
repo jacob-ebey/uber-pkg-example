@@ -1,9 +1,5 @@
-import {
-  sign,
-  unsign,
-  type SignFunction,
-  type UnsignFunction,
-} from "#platform";
+import { type SignFunction, type UnsignFunction } from "@example/platform";
+import { sign, unsign } from "#platform";
 
 import type { CookieParseOptions, CookieSerializeOptions } from "cookie";
 import { parse, serialize } from "cookie";

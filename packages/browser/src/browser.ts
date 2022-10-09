@@ -1,5 +1,4 @@
 import { type SignFunction, type UnsignFunction } from "@example/platform";
-export { type SignFunction, type UnsignFunction } from "@example/platform";
 
 export const platform = "browser";
 
