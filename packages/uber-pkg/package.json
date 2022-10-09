@@ -14,7 +14,8 @@
     "#platform": {
       "bun": "@example/bun",
       "node": "@example/node",
-      "worker": "@example/worker"
+      "worker": "@example/worker",
+      "browser": "@example/browser"
     }
   },
   "optionalPeerDependencies": {
@@ -23,6 +24,7 @@
     "@example/worker": "1.0.0"
   },
   "dependencies": {
+    "@example/browser": "1.0.0",
     "@example/platform": "1.0.0",
     "@example/server": "1.0.0"
   },

@@ -1,7 +1,7 @@
 import { type SignFunction, type UnsignFunction } from "@example/platform";
 export { type SignFunction, type UnsignFunction } from "@example/platform";
 
-export const platform = "worker";
+export const platform = "browser";
 
 export const sign: SignFunction = async (value, secret) => {
   let key = await createKey(secret, ["sign"]);

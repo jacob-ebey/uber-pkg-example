@@ -1,8 +1,8 @@
 import invariant from "tiny-invariant";
-import { platform, sign, unsign } from "./worker";
+import { platform, sign, unsign } from "./browser";
 
 export function testPlatform() {
-  invariant(platform == "worker", "platform.name should be worker");
+  invariant(platform == "browser", "platform.name should be browser");
 }
 
 export async function signUnsign() {

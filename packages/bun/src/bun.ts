@@ -1,16 +1,9 @@
-import {
-  type PlatformInfo,
-  type SignFunction,
-  type UnsignFunction,
-} from "@example/platform";
+import { type SignFunction, type UnsignFunction } from "@example/platform";
 export { type SignFunction, type UnsignFunction } from "@example/platform";
 
 import cookieSignature from "cookie-signature";
 
-export const platform: PlatformInfo = {
-  name: "bun",
-  version: process.versions.bun,
-};
+export const platform = "bun";
 
 export const sign: SignFunction = (value, secret) => {
   return Promise.resolve(cookieSignature.sign(value, secret));

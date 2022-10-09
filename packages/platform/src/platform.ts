@@ -5,9 +5,4 @@ export type UnsignFunction = (
   secret: string
 ) => Promise<string | false>;
 
-export type PlatformInfo = {
-  name: string;
-  version?: string;
-};
-
 export {};

@@ -4,7 +4,7 @@ import { platform, sign, unsign } from "./bun";
 
 describe("platform", () => {
   it("should be bun", () => {
-    expect(platform.name).toBe("bun");
+    expect(platform).toBe("bun");
   });
 });
 

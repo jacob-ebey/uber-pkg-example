@@ -5,7 +5,7 @@ import { platform, sign, unsign } from "./node";
 
 describe("platform", () => {
   it("should be node", () => {
-    invariant(platform.name == "node", "platform.name should be node");
+    invariant(platform == "node", "platform.name should be node");
   });
 });
 

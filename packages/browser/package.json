@@ -1,0 +1,24 @@
+{
+  "name": "@example/browser",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node ../../build.mjs",
+    "test": "node ../../worker-tests.mjs"
+  },
+  "source": "src/browser.ts",
+  "exports": {
+    "types": "./dist/browser.d.ts",
+    "require": "./dist/browser.cjs",
+    "default": "./dist/browser.mjs"
+  },
+  "devDependencies": {
+    "@example/platform": "1.0.0",
+    "esbuild": "0.15.10",
+    "fast-glob": "3.2.12",
+    "puppeteer": "18.2.1",
+    "tiny-invariant": "1.3.1",
+    "typescript": "^4.8.4",
+    "workerd": "1.20220926.3"
+  },
+  "sideEffects": false
+}
