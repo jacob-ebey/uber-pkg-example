@@ -2,7 +2,7 @@
   "name": "@example/server",
   "version": "1.0.0",
   "scripts": {
-    "build": "node ../../build.mjs && tsc -b",
+    "build": "node ../../build.mjs && tsc -p ./tsconfig.build.json",
     "test": "concurrently \"npm:test:*\"",
     "test:bun": "bun wiptest tests/bun",
     "test:node": "npx tsx ./tests/node",

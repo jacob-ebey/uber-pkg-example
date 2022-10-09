@@ -1,5 +1,5 @@
 {
-  "include": ["src", "tests"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "emitDeclarationOnly": true,
@@ -8,7 +8,6 @@
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
-    "isolatedModules": true,
-    "types": ["bun-types"]
+    "isolatedModules": true
   }
 }
