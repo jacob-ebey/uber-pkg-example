@@ -25,10 +25,8 @@
     "@example/node": "1.0.0",
     "@example/worker": "1.0.0"
   },
-  "peerDependencies": {
-    "@example/platform": "1.0.0"
-  },
   "dependencies": {
+    "@example/platform": "1.0.0",
     "cookie": "^0.5.0"
   },
   "devDependencies": {
