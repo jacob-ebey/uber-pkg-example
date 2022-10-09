@@ -5,7 +5,7 @@
     "build": "node ../../build.mjs && tsc -p ./tsconfig.build.json",
     "test": "concurrently \"npm:test:*\"",
     "test:bun": "bun wiptest tests/bun",
-    "test:node": "npx tsx ./tests/node",
+    "test:node": "tsx ./tests/node",
     "test:worker": "node ../../worker-tests.mjs ./tests/worker/**/*.test.ts"
   },
   "source": "src/server.ts",
@@ -41,7 +41,7 @@
     "@types/node": "18.8.3",
     "bun-types": "^0.1.11",
     "concurrently": "7.4.0",
-    "npx": "10.2.2",
+    "tsx": "3.10.1",
     "typescript": "^4.8.4"
   },
   "sideEffects": false
