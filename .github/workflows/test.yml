@@ -22,6 +22,8 @@ jobs:
 
       - name: 📥 Install Deps
         uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
 
       - name: 🛠 Build
         run: npm run build -- --concurrency=1
