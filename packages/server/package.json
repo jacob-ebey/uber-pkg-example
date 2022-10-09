@@ -4,6 +4,7 @@
   "scripts": {
     "build": "node ../../build.mjs && tsc -b",
     "test": "concurrently \"npm:test:*\"",
+    "test:bun": "bun wiptest tests/bun",
     "test:node": "npx tsx ./tests/node",
     "test:worker": "node ../../worker-tests.mjs ./tests/worker/*.test.ts"
   },
@@ -34,6 +35,7 @@
     "@example/node": "1.0.0",
     "@example/worker": "1.0.0",
     "@types/cookie": "^0.5.1",
+    "bun-types": "^0.1.11",
     "concurrently": "7.4.0",
     "npx": "10.2.2",
     "typescript": "^4.8.4"
