@@ -23,6 +23,7 @@
     "@example/worker": "1.0.0"
   },
   "dependencies": {
+    "@example/platform": "1.0.0",
     "@example/server": "1.0.0"
   },
   "devDependencies": {
