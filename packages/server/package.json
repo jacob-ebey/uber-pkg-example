@@ -2,7 +2,10 @@
   "name": "@example/server",
   "version": "1.0.0",
   "scripts": {
-    "build": "node ../../build.mjs && tsc -b"
+    "build": "node ../../build.mjs && tsc -b",
+    "test": "concurrently \"npm:test:*\"",
+    "test:node": "npx tsx ./tests/node",
+    "test:worker": "node ../../worker-tests.mjs ./tests/worker/*.test.ts"
   },
   "source": "src/server.ts",
   "exports": {
@@ -28,6 +31,9 @@
   },
   "devDependencies": {
     "@types/cookie": "^0.5.1",
+    "concurrently": "7.4.0",
+    "npx": "10.2.2",
     "typescript": "^4.8.4"
-  }
+  },
+  "sideEffects": false
 }

@@ -5,14 +5,13 @@ import {
 } from "@example/platform";
 export { type SignFunction, type UnsignFunction } from "@example/platform";
 
-const encoder = new TextEncoder();
-
 export const platform: PlatformInfo = {
   name: "worker",
 };
 
 export const sign: SignFunction = async (value, secret) => {
   let key = await createKey(secret, ["sign"]);
+  let encoder = new TextEncoder();
   let data = encoder.encode(value);
   let signature = await crypto.subtle.sign("HMAC", key, data);
   let hash = btoa(String.fromCharCode(...new Uint8Array(signature))).replace(
@@ -29,6 +28,7 @@ export const unsign: UnsignFunction = async (signed, secret) => {
   let hash = signed.slice(index + 1);
 
   let key = await createKey(secret, ["verify"]);
+  let encoder = new TextEncoder();
   let data = encoder.encode(value);
   let signature = byteStringToUint8Array(atob(hash));
   let valid = await crypto.subtle.verify("HMAC", key, signature, data);
@@ -40,6 +40,7 @@ async function createKey(
   secret: string,
   usages: CryptoKey["usages"]
 ): Promise<CryptoKey> {
+  let encoder = new TextEncoder();
   let key = await crypto.subtle.importKey(
     "raw",
     encoder.encode(secret),

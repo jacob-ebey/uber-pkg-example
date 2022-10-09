@@ -1,4 +1,4 @@
-export { createCookie, isCookie } from "./cookies";
+export { createCookie } from "./cookies";
 
 export { type TypedResponse, json, redirect } from "./responses";
 

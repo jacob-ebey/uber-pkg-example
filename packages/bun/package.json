@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "./src/bun.ts",
   "scripts": {
-    "build": ""
+    "test": "bun wiptest"
   },
   "devDependencies": {
     "@example/platform": "1.0.0",
     "bun-types": "^0.1.11"
-  }
+  },
+  "sideEffects": false
 }

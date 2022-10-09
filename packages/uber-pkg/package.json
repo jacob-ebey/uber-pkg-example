@@ -23,10 +23,10 @@
     "@example/worker": "^1.0.0"
   },
   "dependencies": {
-    "@example/runtime": "^1.0.0",
     "@example/server": "1.0.0"
   },
   "devDependencies": {
     "typescript": "^4.8.4"
-  }
+  },
+  "sideEffects": false
 }
