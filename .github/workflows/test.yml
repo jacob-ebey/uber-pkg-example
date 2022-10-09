@@ -22,7 +22,7 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: 🛠 Build
-        run: npm run build
+        run: npm run build -- --concurrency=1
 
       - name: 🧪 Test
-        run: npm test
+        run: npm test -- --concurrency=1
