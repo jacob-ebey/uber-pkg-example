@@ -6,7 +6,7 @@
     "test": "concurrently \"npm:test:*\"",
     "test:bun": "bun wiptest tests/bun",
     "test:node": "npx tsx ./tests/node",
-    "test:worker": "node ../../worker-tests.mjs ./tests/worker/*.test.ts"
+    "test:worker": "node ../../worker-tests.mjs ./tests/worker/**/*.test.ts"
   },
   "source": "src/server.ts",
   "exports": {
@@ -18,7 +18,8 @@
     "#platform": {
       "bun": "@example/bun",
       "node": "@example/node",
-      "worker": "@example/worker"
+      "worker": "@example/worker",
+      "default": "@example/browser"
     }
   },
   "optionalPeerDependencies": {
@@ -27,7 +28,9 @@
     "@example/worker": "1.0.0"
   },
   "dependencies": {
+    "@example/browser": "1.0.0",
     "@example/platform": "1.0.0",
+    "@remix-run/router": "1.0.2",
     "cookie": "^0.5.0"
   },
   "devDependencies": {

@@ -15,7 +15,7 @@
       "bun": "@example/bun",
       "node": "@example/node",
       "worker": "@example/worker",
-      "browser": "@example/browser"
+      "default": "@example/browser"
     }
   },
   "optionalPeerDependencies": {

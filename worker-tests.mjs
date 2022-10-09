@@ -8,13 +8,17 @@ let testsGlob = process.argv[2] || "src/**/*.test.ts";
 
 let testFiles = await glob(testsGlob, {
   cwd: process.cwd(),
+  onlyFiles: true,
+  extglob: true,
+  globstar: true,
 });
 
 testFiles = testFiles.map((f) => f.replace(/\\/g, "/"));
+console.log(testFiles);
 
-let testsToRun = testFiles.map(
-  (file, index) => `import * as test${index} from "./${file}";`
-);
+let testsToRun = testFiles
+  .map((file, index) => `import * as test${index} from "./${file}";`)
+  .join("\n");
 
 let contents = `
 ${testsToRun};
