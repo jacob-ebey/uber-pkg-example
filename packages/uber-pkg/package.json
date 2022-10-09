@@ -18,14 +18,17 @@
     }
   },
   "optionalPeerDependencies": {
-    "@example/bun": "^1.0.0",
-    "@example/node": "^1.0.0",
-    "@example/worker": "^1.0.0"
+    "@example/bun": "1.0.0",
+    "@example/node": "1.0.0",
+    "@example/worker": "1.0.0"
   },
   "dependencies": {
     "@example/server": "1.0.0"
   },
   "devDependencies": {
+    "@example/bun": "1.0.0",
+    "@example/node": "1.0.0",
+    "@example/worker": "1.0.0",
     "typescript": "^4.8.4"
   },
   "sideEffects": false
